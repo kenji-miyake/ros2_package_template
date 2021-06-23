@@ -1,0 +1,7 @@
+/**:
+  ros__parameters:
+    node_params:
+      update_rate_hz: 10.0
+
+    core_params:
+      data: 1

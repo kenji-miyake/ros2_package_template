@@ -1,0 +1,22 @@
+<launch>
+  <!-- Input -->
+  <arg name="input/data" default="~/input/data" />
+
+  <!-- Output -->
+  <arg name="output/data" default="~/output/data" />
+
+  <!-- Parameter -->
+  <arg name="config_file" default="$(find-pkg-share package_name)/config/package_name.param.yaml" />
+
+  <!-- Node -->
+  <node pkg="package_name" exec="package_name_node" name="package_name" output="screen">
+    <!-- Input -->
+    <remap from="~/input/data" to="$(var input/data)"/>
+
+    <!-- Output -->
+    <remap from="~/output/data" to="$(var output/data)"/>
+
+    <!-- Parameter -->
+    <param from="$(var config_file)" />
+  </node>
+</launch>
