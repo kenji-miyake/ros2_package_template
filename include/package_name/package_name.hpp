@@ -20,7 +20,7 @@
 #include <string>
 #include <vector>
 
-#include "rclcpp/logger.hpp"
+#include "rclcpp/logging.hpp"
 
 namespace package_name
 {
